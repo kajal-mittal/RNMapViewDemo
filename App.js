@@ -23,7 +23,20 @@ const INIT_REGION = {
 
 export default class App extends Component {
 	render() {
-		return <MapView />;
+		return (
+			<View style={{ flex: 1, backgroundColor: 'red' }}>
+				<MapView
+					style={{ width: '100%', height: '100%' }}
+					provider="google"
+					initialRegion={{
+						latitude: 37.78825,
+						longitude: -122.4324,
+						latitudeDelta: 0.0922,
+						longitudeDelta: 0.0421
+					}}
+				/>
+			</View>
+		);
 	}
 }
 
